@@ -1,0 +1,57 @@
+.footer {
+    &--contacts {
+        background-color: $white;
+    }
+    .contacts--container {
+        @include widthBlockInCenter;
+        @include flex (space-between);
+        align-items: center;
+        padding: 3.8rem 0;
+        @media(max-width: 789px) {
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+    .contacts--links {
+        @include flex (center, 2rem);
+        &-link {
+            border: 2px solid $green;
+            border-radius: 30rem;
+            width: 4.5rem;
+            height: 4.5rem;
+            @include flex (center);
+            align-items: center;
+        }
+    }
+    .contacts--adress {
+        @include font-descr(1.4rem, 1.64rem, 400, rgba(0, 0, 0, 1));
+    }
+    .tel {
+        @include font-descr(1.6rem, 1.8rem, 400, rgba(0, 0, 0, 1));
+    }
+    .btn-callback {
+        border: 1px solid $green;
+        border-radius: 4rem;
+        background-color: transparent;
+        @include font-descr(1.4rem, 1.64rem, 400, $textColor);
+        padding: 1.2rem 2.6rem;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        &:hover {
+            box-shadow: 0 11px 11px $green, 0 10px 10px $green; 
+        }
+        @media(max-width: 550px) {
+            padding: 1rem;
+        }
+    }
+    &--copy {
+        width: 100%;
+        background-color: $grey;
+        padding: 2.5rem 0
+    }
+    .copy--container {
+        @include widthBlockInCenter;
+        @include flex (space-between);
+        @include font-descr(1.2rem, 1.4rem, 400, rgba(130, 130, 130, 1));
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,16 @@
+@mixin font-descr ($f-size, $f-height, $f-weight, $f-color) {
+    font-size: $f-size;
+    line-height: $f-height;
+    font-weight: $f-weight;
+    color: $f-color;
+}
+@mixin widthBlockInCenter ($width: 110rem) {
+    max-width: $width;
+    margin: 0 auto;
+}
+@mixin flex ($justifyContent, $gap: 0, $direction: row) {
+    display: flex;
+    justify-content: $justifyContent;
+    gap: $gap;
+    flex-direction: $direction;
+}

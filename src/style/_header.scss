@@ -1,0 +1,71 @@
+.header {
+    &--menu {
+        @include font-descr(1.4rem, 1.64rem, 400, $textColor);
+        @include flex (center, 3rem);
+        align-items: center;
+        background-color: $grey;
+        padding: 1.7rem 0 1.6rem;
+        @media(max-width: 600px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &--info {
+        @include flex (space-between);
+        @include widthBlockInCenter;
+        margin-top: 2rem;
+        @media(max-width: 600px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &-logo {
+            @include flex (center, 2rem);
+            align-items: center;
+            .logo-name {
+                @include font-descr(3.6rem, 4.21rem, 700, $green);
+            }
+        }
+        &-callback {
+            @include flex (center, 4rem);
+            align-items: center;
+            @media(max-width: 550px) {
+                gap: 2rem;
+            }
+            .btn-callback {
+                border: 1px solid $green;
+                border-radius: 4rem;
+                background-color: transparent;
+                @include font-descr(1.4rem, 1.64rem, 400, $textColor);
+                padding: 1.2rem 2.6rem;
+                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                &:hover {
+                    box-shadow: 0 11px 11px $green, 0 10px 10px $green; 
+                }
+                @media(max-width: 550px) {
+                    padding: 1rem;
+                }
+            }
+            .tel {
+                @include font-descr(1.6rem, 1.64rem, 400, $textColor);
+            }
+        }
+    }
+    .line {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        height: 1px;
+        background-color: $white;
+    }
+    &--contentNavigation {
+        @include widthBlockInCenter;
+        @include flex (center, 4rem);
+        @include font-descr(1.6rem, 1.87rem, 400, $textColor);
+        margin-bottom: 3rem;
+        @media(max-width: 600px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+    }
+}

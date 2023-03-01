@@ -1,0 +1,113 @@
+.products {
+    background-color: $grey;
+    &-title {
+        @include font-descr (2.4rem, 2.8rem, 700, rgba(0, 0, 0, 1));
+        padding: 8rem 0 3.8rem;
+        @media (max-width: 985px) {
+            text-align: center;
+        }
+    }
+    &-container {
+        @include widthBlockInCenter;
+    }
+    &--items {
+        @include flex (center, 3rem);
+        padding-bottom: 10rem;
+        @media (max-width: 985px) {
+            flex-wrap: wrap
+        }
+    }
+    &--item {
+        @include flex (center, 3rem, column);
+        align-items: center;
+        background-color: #fff;
+        max-width: 25.5rem;
+        text-align: center;
+        padding: 2.5rem 3.5rem;
+        &-title {
+            @include font-descr (1.4rem, 1.9rem, 400, $textColor);
+        }
+        &-price {
+            @include font-descr (2.1rem, 2.4rem, 500, rgba(0, 0, 0, 1));
+        }
+        &-btn {
+            @include font-descr (1.4rem, 1.6rem, 400, $white);
+            border-radius: 3rem;
+            border: none;
+            background-color: $green;
+            padding: .9rem 4rem;
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                &:hover {
+                    box-shadow: 0 6px 6px $grey, 0 5px 5px $grey; 
+                }
+        }
+    }
+    &--offerForms {
+        padding-bottom: 13.3rem;
+        @include flex (center, 3rem);
+        @media (max-width: 973px) {
+            flex-direction: column;
+            margin: 0 3rem 0 3rem;
+            align-items: center;
+        }
+       &-item {
+        background-color: $green;
+        width: 54rem;
+        max-width: 100%;
+        @include flex (center, 6rem);
+        padding-right: 4.5rem;
+        align-items: center;
+        @media (max-width: 453px) {
+            @include flex (center, 1rem, column);
+            align-items: center;
+            text-align: center;
+            padding-right: 0;
+            padding-bottom: 2rem;
+        }
+        &-imgMail {
+            width: 14rem;
+            @media (max-width: 453px) {
+                width: 10rem;
+            }
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .offerForm {
+            padding: 2.5rem 0 3.5rem 4rem;
+            @media (max-width: 453px) {
+                padding: 2rem;
+            }
+            @include flex (center, 2.5rem, column);
+        
+            &-title {
+                @include font-descr (1.8rem, 2.1rem, 700, $white);
+            }
+            &-text {
+                @include font-descr (1.4rem, 1.9rem, 400, $white);
+            }
+            &-input {
+                border: none;
+                border-radius: 3rem;
+                background-color: $white;
+                padding: .9rem 2.5rem;
+                &::placeholder {
+                    color: rgba(196, 196, 196, 1);
+                }
+            }
+            &-btn {
+                border: 2px solid $white;
+                border-radius: 3rem;
+                background-color: transparent;
+                padding: .9rem 2.5rem;
+                margin-top: 2.5rem;
+                color: $white;
+                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                &:hover {
+                    box-shadow: 0 6px 6px $grey, 0 5px 5px $grey; 
+                }
+            }
+        }
+       }
+    }
+}
